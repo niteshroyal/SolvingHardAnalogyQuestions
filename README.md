@@ -16,24 +16,28 @@ If you use this work in your research, please cite our paper:
 
 ## Setup Instructions
 
-### Create the Required Folder:
+### Installation:
 
 ```commandline
-mkdir -p /scratch/c.scmnk4/elexir/
+conda create -n analogies python=3.10.11
+conda activate analogies
+pip install relbert
+pip install unidecode
+pip install gensim
+pip install git+https://github.com/yuce/pyswip@ab3a36d#egg=pyswip
+pip install lmdb
+pip install redis
+conda install -c conda-forge rocksdb
+conda install -c conda-forge python-rocksdb
 ```
 
-### Provide User Access to the resources Folder:
-
-```commandline
-chmod 700 /scratch/c.scmnk4/elexir/
-```
-
-### Download the Trained Models:
-
+### Download resources:
 *  Download the "checkpoint" folder containing trained models and additional files from [this link](https://cf-my.sharepoint.com/:f:/g/personal/kumarn8_cardiff_ac_uk/EqnafbhDt-pMpnroAM_H4GYBfOp6eGCzis_riCFrc1ZyXA?e=6lGWi7)
 *  Move the downloaded folder to the appropriate location:
 
 ```commandline
+sudo mkdir -p /scratch/c.scmnk4/elexir/
+chmod 700 /scratch/c.scmnk4/elexir/
 mv checkpoint /scratch/c.scmnk4/elexir/resources
 ```
 
