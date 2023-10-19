@@ -1,74 +1,75 @@
 # General configuration
 # ---------------------
-logging_folder = "/home/nitesh/elexir/reasoning_with_vectors/logs"
-knowledge_graph_file = "/scratch/c.scmnk4/elexir/resources/conceptnet_kb.pl"
+logging_folder = "/home/niteshkumar/elexir/reasoning_with_vectors/logs"
+knowledge_graph_file = "/scratchtest/c.scmnk4/elexir/resources/conceptnet_kb.pl"
 
 # Configuration for importance_filter.py
 # --------------------------------------
-# classifier_model_path = '/scratch/c.scmnk4/elexir/resources/learned_models/importance_classifier.pkl'
-# classifier_model_path = '/scratch/c.scmnk4/elexir/resources/learned_models/conceptnet_importance_classifier.pkl'
-classifier_model_path = '/scratch/c.scmnk4/elexir/resources/learned_models/gpt4_high_quality_importance_classifier.pkl'
+classifier_model_path = '/scratchtest/c.scmnk4/elexir/resources/learned_models/gpt4_high_quality_importance_classifier.pkl'
+
 
 # Configuration for cache.py
 # --------------------------
-rocksdb_path = '/scratch/c.scmnk4/elexir/resources/relbert_embeddings.db'
-rocksdb_lock = '/scratch/c.scmnk4/elexir/resources/rocksdb.lock'
-rocksdb_path_eval = '/scratch/c.scmnk4/elexir/resources/relbert_embeddings_for_evaluation.db'
-rocksdb_eval_lock = '/scratch/c.scmnk4/elexir/resources/rocksdb_eval.lock'
+rocksdb_path = '/scratchtest/c.scmnk4/elexir/resources/relbert_embeddings.db'
+rocksdb_lock = '/scratchtest/c.scmnk4/elexir/resources/rocksdb.lock'
+rocksdb_path_eval = '/scratchtest/c.scmnk4/elexir/resources/relbert_embeddings_for_evaluation.db'
+rocksdb_eval_lock = '/scratchtest/c.scmnk4/elexir/resources/rocksdb_eval.lock'
 
 # Configuration for preprocessing.py
 # ----------------------------------
 get_related_concepts_using_word_embeddings_topn = 5
 
+
 # Configuration for data_processor.py
 # ----------------------------------
-relbert_batch_size = 250
-num_of_training_concept_pairs = 50
+relbert_batch_size = 4500
+num_of_training_concept_pairs = 200000
 importance_threshold = 0.75
 inverse = False
 
 # Configuration for training.py
 # -----------------------------
 vector_space_dimension = 1024
-inner_layer_dimension = 256
-number_of_epochs = 1000
-training_batch_size = 10000
-model_save_path = '/scratch/c.scmnk4/elexir/resources/learned_models/'
-learning_rate = 0.0025
+inner_layer_dimension = 81920
+number_of_epochs = 5
+training_batch_size = 500
+model_save_path = '/scratchtest/c.scmnk4/elexir/resources/learned_models/'
+learning_rate = 0.000025
 
 # Configuration for evaluation.py
 # -------------------------------
-analogy_datasets_path = "/scratch/c.scmnk4/elexir/resources/analogy_test_dataset/analogy_test_dataset"
-analogy_datasets = ['sat', 'u2', 'u4', 'bats', 'google', 'scan', 'ekar']
-# analogy_datasets = ['bats']
+analogy_datasets_path = "/scratchtest/c.scmnk4/elexir/resources/analogy_test_dataset/analogy_test_dataset"
+analogy_datasets = ['ekar', 'scan', 'sat', 'u2', 'u4', 'bats', 'google']
+#analogy_datasets = ['bats']
+
 # Configuration for kb_constructor.py
 # -----------------------------------
 importance_filter_threshold = 0.75
-glove_file = "/scratch/c.scmnk4/elexir/resources/glove_numberbatch.pl"
-glove_filtered_file = "/scratch/c.scmnk4/elexir/resources/glove_numberbatch_filtered.pl"
-relative_init_file = "/scratch/c.scmnk4/elexir/resources/relative_init_kb.pl"
+glove_file = "/scratchtest/c.scmnk4/elexir/resources/glove_numberbatch.pl"
+glove_filtered_file = "/scratchtest/c.scmnk4/elexir/resources/glove_numberbatch_filtered.pl"
+relative_init_file = "/scratchtest/c.scmnk4/elexir/resources/relative_init_kb.pl"
 
 # Configuration for relation_clustering.py
 # ----------------------------------------
-n_clusters = 50
-rocksdb_clustering_path = '/scratch/c.scmnk4/elexir/resources/relbert_embeddings_for_clustering.db'
-rocksdb_clustering_lock = '/scratch/c.scmnk4/elexir/resources/rocksdb_for_clustering.lock'
-enriched_kb_with_clusters = f'/scratch/c.scmnk4/elexir/resources/enriched_kb_with_{n_clusters}clusters.pl'
-n_components = 64
-min_cluster_size = 3
-clustering_batch_size = 500000
-pca_path = '/scratch/c.scmnk4/elexir/resources/learned_models/incrementalPCA.pkl'
-clustering_path = '/scratch/c.scmnk4/elexir/resources/learned_models/clusterer.pkl'
-mini_batch_kmeans_batch_size = 25
+n_clusters = 5000
+rocksdb_clustering_path = '/scratchtest/c.scmnk4/elexir/resources/relbert_embeddings_for_clustering.db'
+rocksdb_clustering_lock = '/scratchtest/c.scmnk4/elexir/resources/rocksdb_for_clustering.lock'
+enriched_kb_with_clusters = f'/scratchtest/c.scmnk4/elexir/resources/enriched_kb_with_{n_clusters}clusters.pl'
+n_components = 32
+min_cluster_size = 1000
+clustering_batch_size = 1000000
+pca_path = '/scratchtest/c.scmnk4/elexir/resources/learned_models/incrementalPCA.pkl'
+clustering_path = '/scratchtest/c.scmnk4/elexir/resources/learned_models/clusterer.pkl'
+mini_batch_kmeans_batch_size = 250000
 
 # Configuration for enriched_kb.py
 # --------------------------------
-qa_vocab_file = "/scratch/c.scmnk4/elexir/resources/qa_concepts.txt"
-original_conceptnet_used_in_qagnn = "/scratch/c.scmnk4/elexir/resources/conceptnet-assertions-5.6.0.csv"
-enriched_conceptnet = f'/scratch/c.scmnk4/elexir/resources/enriched-conceptnet-5.6.0-' \
+qa_vocab_file = "/scratchtest/c.scmnk4/elexir/resources/qa_concepts.txt"
+original_conceptnet_used_in_qagnn = "/scratchtest/c.scmnk4/elexir/resources/conceptnet-assertions-5.6.0.csv"
+enriched_conceptnet = f'/scratchtest/c.scmnk4/elexir/resources/enriched-conceptnet-5.6.0-' \
                       f'with-importance-thres-{importance_filter_threshold}.csv'
-enriched_conceptnet_with_clusters = f'/scratch/c.scmnk4/elexir/resources/enriched-conceptnet-5.6.0-' \
-                                    f'with-importance-thres-{importance_filter_threshold}-clusters-{n_clusters}.csv'
+enriched_conceptnet_with_clusters = f'/scratchtest/c.scmnk4/elexir/resources/enriched-conceptnet-5.6.0-' \
+                      f'with-importance-thres-{importance_filter_threshold}-clusters-{n_clusters}.csv'
 
 # Configuration for leveldb_cache.py
 # ----------------------------------
@@ -77,7 +78,7 @@ leveldb_lock = '/scratch/c.scmnk4/elexir/resources/leveldb.lock'
 
 # Configuration for lmdb_cache.py
 # ----------------------------------
-lmdb_path = '/scratch/c.scmnk4/elexir/resources/lmdb_store'
+lmdb_path = '/scratchtest/c.scmnk4/elexir/resources/lmdb_store'
 
 # Configuration for set_transformer.py
 # ------------------------------------
@@ -87,7 +88,7 @@ num_heads = 4
 # Configuration for experiment1_data_processor.py
 # -----------------------------------------------
 
-# # Consider only ConceptNet edges for paths. (CN)
+# Consider only ConceptNet edges for paths. (CN)
 # dataset_preparation_approch_for_composition_model = 1
 
 # (CN + Smoothing)
@@ -112,17 +113,16 @@ dataset_preparation_approch_for_composition_model = 4
 # # Same as approach 4, difference is that target pair is selected without using any importance classifier.
 # dataset_preparation_approch_for_composition_model = 7
 
-
-training_dataset = f"/scratch/c.scmnk4/elexir/resources/training/training_data_for_" \
-                   f"composition_model_appr_{dataset_preparation_approch_for_composition_model}.pkl"
+training_dataset = f"/scratchtest/c.scmnk4/elexir/resources/training/training_data_for_composition_model_appr_{dataset_preparation_approch_for_composition_model}.pkl"
 clear_redis_cache_in_the_start = True
-training_concept_pairs_file = "/scratch/c.scmnk4/elexir/resources/training_concept_pairs.txt"
+training_concept_pairs_file = "/scratchtest/c.scmnk4/elexir/resources/training_concept_pairs.txt"
 
 if dataset_preparation_approch_for_composition_model == 6:
-    training_concept_pairs_file = "/scratch/c.scmnk4/elexir/resources/training_concept_pairs_dp6.txt"
-    classifier_model_path = '/scratch/c.scmnk4/elexir/resources/learned_models/conceptnet_importance_classifier.pkl'
+    training_concept_pairs_file = "/scratchtest/c.scmnk4/elexir/resources/training_concept_pairs_dp6.txt"
+    classifier_model_path = '/scratchtest/c.scmnk4/elexir/resources/learned_models/conceptnet_importance_classifier.pkl'
 elif dataset_preparation_approch_for_composition_model == 7:
-    training_concept_pairs_file = "/scratch/c.scmnk4/elexir/resources/training_concept_pairs_dp7.txt"
+    training_concept_pairs_file = "/scratchtest/c.scmnk4/elexir/resources/training_concept_pairs_dp7.txt"
+
 
 # Configuration for experiment1_training.py
 # -----------------------------------------
@@ -133,6 +133,7 @@ composition_model = 'CompositionModel'
 # composition_model = 'SetTransformer'
 
 num_runs = 1
+
 
 # Configuration for experiment1_evaluation.py
 # -------------------------------------------
@@ -147,14 +148,14 @@ evaluation_model = 'Sum_Max_Min'
 llm_correct_predictions_file = ''
 llm_incorrect_predictions_file = ''
 if evaluation_model == 'GPT-4':
-    llm_correct_predictions_file = '/scratch/c.scmnk4/elexir/resources/results/gpt-4_correct_predictions.txt'
-    llm_incorrect_predictions_file = '/scratch/c.scmnk4/elexir/resources/results/gpt-4_incorrect_predictions.txt'
+    llm_correct_predictions_file = '/scratchtest/c.scmnk4/elexir/resources/results/gpt-4_correct_predictions.txt'
+    llm_incorrect_predictions_file = '/scratchtest/c.scmnk4/elexir/resources/results/gpt-4_incorrect_predictions.txt'
 elif evaluation_model == 'GPT-3.5-Turbo':
-    llm_correct_predictions_file = '/scratch/c.scmnk4/elexir/resources/results/' \
-                                   'gpt-3.5-turbo_correct_predictions.txt'
-    llm_incorrect_predictions_file = '/scratch/c.scmnk4/elexir/resources/results/' \
-                                     'gpt-3.5-turbo_incorrect_predictions.txt'
+    llm_correct_predictions_file = '/scratchtest/c.scmnk4/elexir/resources/results/gpt-3.5-turbo_correct_predictions.txt'
+    llm_incorrect_predictions_file = '/scratchtest/c.scmnk4/elexir/resources/results/gpt-3.5-turbo_incorrect_predictions.txt'
 else:
     pass
+results_folder = '/scratchtest/c.scmnk4/elexir/resources/results/'
 
-results_folder = '/scratch/c.scmnk4/elexir/resources/results/'
+
+
