@@ -73,7 +73,7 @@ Remember to specify the generated pickle file in the main section of `experiment
 
 ```
 if __name__ == '__main__':
-    the_results_file = '/scratch/c.scmnk4/elexir/resources/results/dp4_Sum_Max_Min.pkl'
+    the_results_file = configuration.results_folder + 'dp4_Sum_Max_Min.pkl'
     obj = Percentile(the_results_file)
     obj.evaluate_performance_on_partitioned_dataset()
 ```
