@@ -97,8 +97,32 @@ However, if you want to train the Condensed Model again then do the following:
 python reasoning_with_vectors/experiments/data_processor.py
 ```
 
-* Train the Condense Model on the created training dataset with:
+* Train the Condensed Model on the created training dataset with:
 
 ```commandline
 python reasoning_with_vectors/experiments/training.py
 ```
+
+* Similar to Direct approach, to evaluate the Condensed approach, first run: 
+
+```commandline
+python reasoning_with_vectors/experiments/evaluation.py
+```
+
+This will create a pickle file in the `/scratchtest/c.scmnk4/elexir/resources/results` folder. You will need this pickle file for the next step:
+
+```commandline
+python reasoning_with_vectors/experiments/analysis.py
+```
+
+Remember to specify the generated pickle file in the main section of `experiments/analysis.py`.
+
+## Training importance classifier
+
+To train the importance classifier do the following:
+
+```commandline
+python importance/importance_filter_training.py
+```
+
+

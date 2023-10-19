@@ -19,7 +19,7 @@ from reasoning_with_vectors.core.data_processor import TrainingDataProcessor
 
 import pickle
 
-from reasoning_with_vectors.importance.positive_concept_pairs import part_to_whole, type_and_category, \
+from reasoning_with_vectors.importance.positive_concept_pairs import (part_to_whole, type_and_category, \
     used_to, manner, symbol_or_representation, action_and_significance, degree_of_intensity, synonyms, antonyms, \
     hyponyms, hypernyms, morphologies, spatial_relationships, temporal_relationships, tools_and_materials, \
     sequence_or_hierarchy, syncretic_relationships, complementary_concepts, cultural_or_historical_associations, \
@@ -31,7 +31,9 @@ from reasoning_with_vectors.importance.positive_concept_pairs import part_to_who
     connotative_or_denotative_meanings, tautology, quantifiers, abbreviations, reduplication, \
     domain_specific_relationships, measurement_and_scale, conversion_relationships, associative_relationships, \
     phrasal_verb_concept_pairs, loanwords, kinship_relationships, element_and_compound, sensory_associations, \
-    related_concept_pairs
+    related_concept_pairs, extra_related_concept_pairs, extra_extra_related_concept_pairs,
+    extra_extra_extra_related_concept_pairs, extra_extra_extra_extra_related_concept_pairs,
+    extra_extra_extra_extra_extra_related_concept_pairs)
 
 # relations = [part_to_whole, type_and_category, used_to, manner, symbol_or_representation, action_and_significance,
 #              degree_of_intensity, synonyms, antonyms, hyponyms, hypernyms, homophones, morphologies,
@@ -51,22 +53,34 @@ from reasoning_with_vectors.importance.positive_concept_pairs import part_to_who
 #              associative_relationships, phrasal_verb_concept_pairs, loanwords, idiomatic_expressions, proverbs,
 #              kinship_relationships, element_and_compound, sensory_associations, cliches_and_tropes]
 
+# relations = [part_to_whole, type_and_category, used_to, manner, symbol_or_representation, action_and_significance,
+#              degree_of_intensity, synonyms, antonyms, hyponyms, hypernyms, morphologies,
+#              spatial_relationships,
+#              temporal_relationships, tools_and_materials, sequence_or_hierarchy, syncretic_relationships,
+#              complementary_concepts, cultural_or_historical_associations, similes, collocations,
+#              agent_and_recipient, coinage_or_neologisms, gender_related, known_for, has_property, occupation,
+#              located_at,
+#              capital_of, shared_features, aesthetic_relationships, co_occurrence_patterns, cognitive_associations,
+#              phonetic_symbolism, metonymy, allusions_and_references, juxtaposition, cause_and_effect,
+#              word_families,
+#              counterparts, diminutive_and_augmentative_forms, onomatopoeia, affixation, intensifiers_and_reducers,
+#              membership_in_a_common_set, eponymous_relationships, etymological_relationships,
+#              connotative_or_denotative_meanings, tautology, quantifiers, abbreviations, reduplication,
+#              domain_specific_relationships, measurement_and_scale, conversion_relationships,
+#              associative_relationships, phrasal_verb_concept_pairs, loanwords,
+#              kinship_relationships, element_and_compound, sensory_associations]
+
 relations = [part_to_whole, type_and_category, used_to, manner, symbol_or_representation, action_and_significance,
-             degree_of_intensity, synonyms, antonyms, hyponyms, hypernyms, morphologies,
-             spatial_relationships,
+             degree_of_intensity, synonyms, antonyms, hyponyms, hypernyms, morphologies, spatial_relationships,
              temporal_relationships, tools_and_materials, sequence_or_hierarchy, syncretic_relationships,
-             complementary_concepts, cultural_or_historical_associations, similes, collocations,
-             agent_and_recipient, coinage_or_neologisms, gender_related, known_for, has_property, occupation,
-             located_at,
-             capital_of, shared_features, aesthetic_relationships, co_occurrence_patterns, cognitive_associations,
-             phonetic_symbolism, metonymy, allusions_and_references, juxtaposition, cause_and_effect,
-             word_families,
-             counterparts, diminutive_and_augmentative_forms, onomatopoeia, affixation, intensifiers_and_reducers,
-             membership_in_a_common_set, eponymous_relationships, etymological_relationships,
-             connotative_or_denotative_meanings, tautology, quantifiers, abbreviations, reduplication,
-             domain_specific_relationships, measurement_and_scale, conversion_relationships,
-             associative_relationships, phrasal_verb_concept_pairs, loanwords,
-             kinship_relationships, element_and_compound, sensory_associations]
+             complementary_concepts, similes, collocations, agent_and_recipient, coinage_or_neologisms, gender_related,
+             has_property, located_at, shared_features, aesthetic_relationships, co_occurrence_patterns,
+             cognitive_associations, juxtaposition, cause_and_effect, word_families, counterparts,
+             diminutive_and_augmentative_forms, affixation, membership_in_a_common_set,
+             connotative_or_denotative_meanings, associative_relationships, phrasal_verb_concept_pairs,
+             kinship_relationships, sensory_associations, extra_related_concept_pairs,
+             extra_extra_related_concept_pairs, extra_extra_extra_related_concept_pairs,
+             extra_extra_extra_extra_related_concept_pairs, extra_extra_extra_extra_extra_related_concept_pairs]
 
 
 def initialization():
