@@ -55,7 +55,7 @@ To evaluate the Direct approach on the analogy datasets, first store all RelBERT
 python reasoning_with_vectors/core/preprocessing.py
 ```
 
-This step is not mandatory, but executing it will speed up the evaluation process since RelBERT will not be called each time for relation embedding.
+This may take a lot of time. To tracke the progress see the logs files in `logs` folder. This step is not mandatory, but executing it will speed up the evaluation process since RelBERT will not be called each time for relation embedding.
 
 Now, to evaluate the Direct approach, first run:
 
