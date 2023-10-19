@@ -76,16 +76,16 @@ class Percentile:
             if 'predictions' in data:
                 results = data['predictions']
         self.load_meta_data(relbert_emb, composition_emb, related_concepts, results)
-        with open('results/partition1.txt', 'w') as file1, \
-                open('results/partition2.txt', 'w') as file2, \
-                open('results/partition3.txt', 'w') as file3, \
-                open('results/partition4.txt', 'w') as file4, \
-                open('results/partition5.txt', 'w') as file5, \
-                open('results/partition6.txt', 'w') as file6, \
-                open('results/partition7.txt', 'w') as file7, \
-                open('results/partition8.txt', 'w') as file8, \
-                open('results/partition9.txt', 'w') as file9, \
-                open('results/partition10.txt', 'w') as file10:
+        with open('/scratch/c.scmnk4/elexir/resources/results/partition1.txt', 'w') as file1, \
+                open('/scratch/c.scmnk4/elexir/resources/results/partition2.txt', 'w') as file2, \
+                open('/scratch/c.scmnk4/elexir/resources/results/partition3.txt', 'w') as file3, \
+                open('/scratch/c.scmnk4/elexir/resources/results/partition4.txt', 'w') as file4, \
+                open('/scratch/c.scmnk4/elexir/resources/results/partition5.txt', 'w') as file5, \
+                open('/scratch/c.scmnk4/elexir/resources/results/partition6.txt', 'w') as file6, \
+                open('/scratch/c.scmnk4/elexir/resources/results/partition7.txt', 'w') as file7, \
+                open('/scratch/c.scmnk4/elexir/resources/results/partition8.txt', 'w') as file8, \
+                open('/scratch/c.scmnk4/elexir/resources/results/partition9.txt', 'w') as file9, \
+                open('/scratch/c.scmnk4/elexir/resources/results/partition10.txt', 'w') as file10:
             for dataset_name in configuration.analogy_datasets:
                 all_choices = []
                 data = read_datasets(dataset_name, approach='only_test')

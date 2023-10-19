@@ -139,6 +139,6 @@ class Processor(LMDB):
 
 if __name__ == '__main__':
     initialization()
-    obj = Processor(read_only=False, db_path=configuration.rocksdb_path_eval, lock_path=configuration.rocksdb_eval_lock)
+    obj = Processor()
     obj.store_relbert_vectors_required_for_evaluation()
     # print(obj.get_related_concepts('dog', 'puppy'))
