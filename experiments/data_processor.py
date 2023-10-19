@@ -224,8 +224,8 @@ def qualitative_analysis_on_related_concepts():
 
 if __name__ == '__main__':
     initialization()
-    qualitative_analysis_on_related_concepts()
+    # qualitative_analysis_on_related_concepts()
 
-    # obj = DataProcessor()
-    # obj.get_training_concept_pairs_from_db()
-    # obj.extract_training_data()
+    obj = DataProcessor()
+    obj.get_training_concept_pairs_from_db()
+    obj.extract_training_data()
