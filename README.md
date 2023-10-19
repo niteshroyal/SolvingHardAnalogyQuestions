@@ -21,7 +21,7 @@ If you use this work in your research, please cite our paper:
 ```commandline
 conda create -n analogies python=3.10.11
 conda activate analogies
-pip install relbert unidecode gensim git+https://github.com/yuce/pyswip@ab3a36d#egg=pyswip lmdb redis
+pip install relbert unidecode gensim git+https://github.com/yuce/pyswip@ab3a36d#egg=pyswip lmdb redis matplotlib xgboost
 conda install -c conda-forge python-rocksdb
 ```
 
@@ -122,7 +122,7 @@ Remember to specify the generated pickle file in the main section of `experiment
 To train the importance classifier do the following:
 
 ```commandline
-python importance/importance_filter_training.py
+python reasoning_with_vectors/importance/importance_filter_training.py
 ```
 
 
