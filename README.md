@@ -26,8 +26,8 @@ conda install -c conda-forge python-rocksdb
 ```
 
 ### Download resources:
-*  Download the "checkpoint" folder containing trained models and additional files from [this link](https://cf-my.sharepoint.com/:f:/g/personal/kumarn8_cardiff_ac_uk/EqnafbhDt-pMpnroAM_H4GYBfOp6eGCzis_riCFrc1ZyXA?e=6lGWi7)
-*  Move the downloaded folder to the appropriate location:
+*  Download the "checkpoint.zip" file containing trained models and additional files from [this link](https://huggingface.co/niteshroyal/SolvingHardAnalogyQuestions/resolve/main/checkpoint.zip)
+*  Unzip it and move the unziped `checkpoint` folder to the appropriate location:
 
 ```commandline
 sudo mkdir -p /scratchtest/c.scmnk4/elexir/
@@ -47,6 +47,18 @@ export PYTHONPATH="${PYTHONPATH}:/your_path_to/SolvingHardAnalogyQuestions"
 ```
 
 ## Reproducing the results
+
+Move to your working directory:
+
+```commandline
+cd SolvingHardAnalogyQuestions/
+```
+
+The configuration file is `reasoning_with_vectors/conf/exper_conf.py`. Set the location of the logging folder in that file:
+
+```
+logging_folder = "/your_path_to/SolvingHardAnalogyQuestions/reasoning_with_vectors/logs"
+```
 
 ### Running the Direct Approach
 
@@ -117,7 +129,7 @@ python reasoning_with_vectors/experiments/analysis.py
 
 Remember to specify the generated pickle file in the main section of `experiments/analysis.py`.
 
-## Training importance classifier
+## Training the importance classifier
 
 To train the importance classifier do the following:
 
