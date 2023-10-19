@@ -46,7 +46,7 @@ cd SolvingHardAnalogyQuestions/
 export PYTHONPATH="${PYTHONPATH}:/your_path_to/SolvingHardAnalogyQuestions"
 ```
 
-## Reproducing the EMNLP paper results
+## Reproducing the results
 
 ### Running the Direct Approach
 
