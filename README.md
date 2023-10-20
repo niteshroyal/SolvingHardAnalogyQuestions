@@ -26,7 +26,7 @@ conda install -c conda-forge python-rocksdb
 ```
 
 ### Download resources:
-*  Download the "checkpoint.zip" file containing trained models and additional files from [this link](https://huggingface.co/niteshroyal/SolvingHardAnalogyQuestions/resolve/main/checkpoint.zip)
+*  Download the "checkpoint.zip" file containing trained models and additional files from [this link](https://cf-my.sharepoint.com/:u:/g/personal/kumarn8_cardiff_ac_uk/EWuKxOgsCj1NmRU4r3gCbTQB3nUewT3S9UtHh4VssLuP5A?e=n4PBsn)
 *  Unzip it and move the unziped `checkpoint` folder to the appropriate location:
 
 ```commandline
