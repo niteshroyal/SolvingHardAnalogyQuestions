@@ -30,6 +30,7 @@ conda install -c conda-forge python-rocksdb
 *  Unzip it and move the unziped `checkpoint` folder to the appropriate location:
 
 ```commandline
+unzip checkpoint.zip
 sudo mkdir -p /scratchtest/c.scmnk4/elexir/
 sudo chmod 777 /scratchtest/c.scmnk4/elexir/
 mv checkpoint /scratchtest/c.scmnk4/elexir/resources
